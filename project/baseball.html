@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 야구</title>
+    <style>
+        body{
+            width:70%;
+            height:50%;
+            margin: auto;
+            background-color: rgb(163,204,163);
+            align-items: center;
+        }
+        h1{margin:50px 0 ; font-size:50px;}
+        h1{font-family: serif; font-weight:100;color:white; vertical-align: top;}
+        #screen{color:white; font-size:23px; margin:30px;}
+        #input{width:300px;height:100px;font-size:50px; text-align:center;}
+        button{
+            background-color: rgb(120, 150, 120);
+            border-radius: 10px;
+            position: relative;
+            border: 0;
+            padding: 15px 25px;
+            display: inline-block;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>숫자야구 게임</h1>
+    <form id="form">
+        <input type="text" id="input">
+        <button>확인</button>
+    </form>
+    <div id="screen"></div>
+
+    <script>
+        const Input = document.getElementById('input');
+        const Form = document.getElementById('form');
+        const Board = document.getElementById('screen');
+        var out=0;
+        const numbers=[1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        const answer=[];
+        //랜덤 숫자 배열 생성
+        for(let n=0; n<4; n+=1){
+            const index = Math.floor(Math.random() * (9-n));/*0~8*/
+            answer.push(numbers[index]);
+            numbers.splice(index, 1);
+        }
+        console.log("answer:",answer);
+
+        const tries=[];
+        function checkInput(input)
+        {
+            //4글자 체크
+            if(input.length !==4){                
+                return alert('4자리 숫자를 입력하세요.');
+            }
+            //숫자 중복 체크
+            if (new Set(input).size !== 4){                
+                return alert('중복된 숫자가 있습니다.');
+            }
+            //중복 체크
+            if(tries.includes(input)){
+                return alert('이미 시도한 값입니다.');
+            }
+            if(input.includes(0)){
+                return alert('1~9의 숫자를 입력하세요.')
+            }
+            //문제없음
+            return true;
+        }
+
+        Form.addEventListener('submit',(event)=>
+        {
+            event.preventDefault();//새로고침 막기
+            const value=Input.value;
+            Input.value='';//초기화
+            if(!checkInput(value)){return;}
+ 
+           if (answer.join('')===value){
+               Board.textContent='홈런!';
+               return;
+           }
+
+           console.log(tries);
+           if(tries.length>=18){
+               const message = document.createTextNode(`패배! 정답은 ${answer.join('')}`);
+               Board.append(message);
+               return;
+           }
+
+           tries.push(value);
+        
+
+        //스트라이크 볼 검사
+        var strike =0;
+        var ball=0;
+        for(var i=0;i<answer.length;i++){
+            const index=value.indexOf(answer[i]);//indexOf로 겹치면 -1반환
+            if(index>-1){
+                if(index===i){  //겹칠시 스트라이크 +1
+                    strike+= 1;
+                }   //안겹칠시 볼 +1
+                else{ball+=1;}
+            }
+        }
+        if(strike===0 && ball===0){
+            out++;
+            Board.append(`${value}: ${out}아웃`,document.createElement('br'));
+        }
+        else{
+            Board.append(`${value}: ${strike}스트라이크 ${ball}볼`, document.createElement('br'));
+        }
+        if(out===3){
+            const message=document.createTextNode(`패배!정답은${answer.join('')}`);
+            Board.append(message);
+            return;
+        }
+        tries.push(value);
+    })
+    </script>
+</body>
+</html>

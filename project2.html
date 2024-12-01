@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBG!Talk-Project2</title>
+</head>
+<body>
+    <!--상태바-->
+    <div class="status-bar">
+        <div class="status-bar__column">
+          <img src="img/logo.jpg">
+          <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+          <span id="Jstime">00:00</span>
+        </div>
+        <div class="status-bar__column">
+          <span>100%</span>
+          <i class="fas fa-battery-full fa-lg"></i>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+
+    <!--첫줄-->
+    <header class="alt-header">
+        <div class="alt-header__column">
+          <a href="find.html">
+            <i class="fas fa-angle-left fa-2x"></i>
+          </a>
+        </div>
+        <div class="alt-header__column">
+          <h1 class="alt-header__title">프로젝트</h1>
+        </div>
+        <div class="alt-header__column">
+          <span><i class="fas fa-ellipsis-h fa-lg"></i></span>
+        </div>
+    </header>
+
+    <main class="main-screen more-screen">
+        <div class="user-component">
+          <div class="user-component__column">
+            <img style="border-radius: 10px;"
+              src="project/project_img/calculator.png"
+              class="user-component__avatar user-component__avatar--xl"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">계산기<a target="_blank" href="project/calculator.html"><i class="fas fa-info-circle" aria-hidden="true"></i></a></h4>
+              <h6 class="user-component__subtitle">2022.06.06 ~ 2022.06.07 (1人 개인 프로젝트)</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+          </div>
+        </div>
+
+<!--- 프로젝트 이름 
+
+
+  - 프로젝트 기간
+
+  - 프로젝트 내용: 최대한 자세하게 서술 (프로젝트에 어떻게 기여했는지에 대한 기여내용을 반드시 넣어주세요)
+
+  - 프로젝트 데모: 사진, 동영상, 웹사이트 형식 웹 프로젝트라면 웹사이트 형식이 가장 좋음.
+-->
+       
+        <div class="more-suggestions">
+          <h4 class="more-suggestions__title" style="margin-bottom:10px;">설명</h4>
+          <p style="font-family: Noto Sans KR,sans-serif; font-size:16px; line-height: normal;">
+            <b style="font-weight:bolder;">자바스크립트의 eval()</b>함수를 이용해 만든 계산기입니다.
+             계산기 입력칸에 계산할 숫자와 부호들을 모아 넣은뒤 <b style="font-weight:bolder;">eval()</b>함수를 활용해 계산하였습니다.    
+          </p>
+          <p><br></p>
+          <p style="font-family: Noto Sans KR,sans-serif; font-size:16px; line-height: normal;"></p>
+
+        </div>
+        <div class="friends-screen__channel">
+          <div class="friends-screen__channel-header">
+            <span>사용 기술</span>
+          </div>
+          <div>
+            <table style="align-items:center; margin:0;">
+              <tr>
+                <td style="text-align: center; width:33%;"><img src="img/html.png" class="user-component__avatar--sm"></td>
+                <td style="text-align:center; width:33%;"><img src="img/css.png" class="user-component__avatar--sm"></td>
+                <td style="text-align:center; width:33%;"><img src="img/java.png" class="user-component__avatar--sm"></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">HTML</td>
+                <td style="text-align: center;">CSS</td>
+                <td style="text-align: center;">JAVA SCRIPT</td>
+              </tr>
+            </table>
+          </div>
+            
+      </main>
+  
+       <!--밑에 상태창-->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__btn">
+            <a class="nav__link" href="friends.html"
+              ><i class="far fa-user fa-2x"></i
+            ></a>
+          </li>
+          <li class="nav__btn">
+            <a onclick class="nav__link" href="chats.html">
+              <span class="nav__notification badge">1</span>
+              <i class="far fa-comment fa-2x"></i>
+            </a>
+          </li>
+          <li class="nav__btn">
+            <a class="nav__link" href="find.html"
+              ><i class="fas fa-search fa-2x"></i
+            ></a>
+          </li>
+          <li class="nav__btn">
+            <a class="nav__link" href="more.html"
+              ><i class="fas fa-ellipsis-h fa-2x"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+  
+       <!--화면 조정-->
+       <div id="no-mobile">
+        <span>화면을 줄여주세요!</span>
+      </div>
+    
+
+      <script
+      src="https://kit.fontawesome.com/bbc877c58c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/time.js"></script>
+</body>
+</html>

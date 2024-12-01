@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBG!Talk-Project1</title>
+</head>
+<body>
+    <!--상태바-->
+    <div class="status-bar">
+        <div class="status-bar__column">
+          <img src="img/logo.jpg">
+          <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+          <span id="Jstime">00:00</span>
+        </div>
+        <div class="status-bar__column">
+          <span>100%</span>
+          <i class="fas fa-battery-full fa-lg"></i>
+          <i class="fas fa-bolt"></i>
+        </div>
+      </div>
+
+    <!--첫줄-->
+    <header class="alt-header">
+        <div class="alt-header__column">
+          <a href="find.html">
+            <i class="fas fa-angle-left fa-2x"></i>
+          </a>
+        </div>
+        <div class="alt-header__column">
+          <h1 class="alt-header__title">프로젝트</h1>
+        </div>
+        <div class="alt-header__column">
+          <span><i class="fas fa-ellipsis-h fa-lg"></i></span>
+        </div>
+    </header>
+
+    <main class="main-screen more-screen">
+        <div class="user-component">
+          <div class="user-component__column">
+            <img
+              src="project/project_img/baseball.png"
+              class="user-component__avatar user-component__avatar--xl"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">숫자 야구 게임<a target="_blank" href="project/baseball.html"><i class="fas fa-info-circle" aria-hidden="true"></i></a></h4>
+              <h6 class="user-component__subtitle">2022.06.03 ~ 2022.06.07 (1人 개인 프로젝트)</h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+          </div>
+        </div>
+       
+        <div class="more-suggestions">
+          <h4 class="more-suggestions__title" style="margin-bottom:10px;">설명</h4>
+          <p style="font-family: Noto Sans KR,sans-serif; font-size:16px; line-height: normal;">간단히 내기삼아 할 수 있는 <b style="font-weight:bolder;">숫자 야구 게임</b>입니다.
+            <b style="font-weight:bolder;">10번의 기회</b> 안에 4자리의 숫자를 맞추면 <b style="font-weight:bolder;">승리</b>입니다! 
+             1~9로 이루어진 4자리 숫자를 입력 할 수 있습니다. 
+             각 자리 숫자 중 어느 하나라도 자리와 숫자가 일치하면 <b style="font-weight:bolder;">스트라이크</b>,
+             숫자만 일치하면 <b style="font-weight:bolder;">볼</b>, 어느하나도 일치하지 않으면 <b style="font-weight:bolder;">아웃</b>입니다. 
+          </p>
+          <p><br></p>
+          <p style="font-family: Noto Sans KR,sans-serif; font-size:16px; line-height: normal;"><b style="font-weight:bolder;">난수</b>를 생성하여 1~9까지의 각 자리 숫자를 생성하였으며 그 숫자가 4자리인지, 중복된 숫자가 있는지, 이전에 시도한 숫자가 있는지 <b style="font-weight:bolder;">중복 체크</b>하도록 만들었습니다.  </p>
+
+        </div>
+        <div class="friends-screen__channel">
+          <div class="friends-screen__channel-header">
+            <span>사용 기술</span>
+          </div>
+          <div>
+            <table style="align-items:center; margin:0;">
+              <tr>
+                <td style="text-align: center; width:33%;"><img src="img/html.png" class="user-component__avatar--sm"></td>
+                <td style="text-align:center; width:33%;"><img src="img/css.png" class="user-component__avatar--sm"></td>
+                <td style="text-align:center; width:33%;"><img src="img/java.png" class="user-component__avatar--sm"></td>
+              </tr>
+              <tr>
+                <td style="text-align: center;">HTML</td>
+                <td style="text-align: center;">CSS</td>
+                <td style="text-align: center;">JAVA SCRIPT</td>
+              </tr>
+            </table>
+          </div>
+            
+      </main>
+  
+       <!--밑에 상태창-->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__btn">
+            <a class="nav__link" href="friends.html"
+              ><i class="far fa-user fa-2x"></i
+            ></a>
+          </li>
+          <li class="nav__btn">
+            <a onclick class="nav__link" href="chats.html">
+              <span class="nav__notification badge">1</span>
+              <i class="far fa-comment fa-2x"></i>
+            </a>
+          </li>
+          <li class="nav__btn">
+            <a class="nav__link" href="find.html"
+              ><i class="fas fa-search fa-2x"></i
+            ></a>
+          </li>
+          <li class="nav__btn">
+            <a class="nav__link" href="more.html"
+              ><i class="fas fa-ellipsis-h fa-2x"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+  
+       <!--화면 조정-->
+       <div id="no-mobile">
+        <span>화면을 줄여주세요!</span>
+      </div>
+    
+
+      <script
+      src="https://kit.fontawesome.com/bbc877c58c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/time.js"></script>
+</body>
+</html>

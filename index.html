@@ -1,0 +1,53 @@
+<!--로그인 페이지-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JBG!Talk-Login</title>
+  </head>
+  <body>
+    <!--상태바-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <img src="img/logo.jpg">
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span id="Jstime">00:00</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fa-solid fa-battery-full"></i>
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+    <!--로그인 섹션-->
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">JBG!Talk에 어서오세요</h1>
+      <p class="welcome-header__text">
+        JBG!Talk 계정이 있으시면 전화번호와 이메일로 로그인하세요.
+      </p>
+    </header>
+
+    <form action="friends.html" method="get" id="login-form">
+      <input name="username" type="text" placeholder="JBG!Talk계정 (이메일 또는 전화번호)" />
+      <input name="password" type="password" placeholder="비밀번호" />
+      <input type="submit" value="로그인" />
+      <a href="#">아이디/패스워드 찾기</a>
+    </form>
+
+    <!--화면 조정-->
+    <div id="no-mobile">
+      <span>화면을 줄여주세요!</span>
+    </div>
+
+    <!--아이콘js-->
+    <script
+      src="https://kit.fontawesome.com/bbc877c58c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/time.js"></script>
+  </body>
+</html>

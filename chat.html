@@ -1,0 +1,172 @@
+<!--채팅방-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JBG!Talk-Chat</title>
+  </head>
+  <body id="chat-screen">
+    <!--상태바-->
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <img src="img/logo_chat.png">
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span id="Jstime">00:00</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <!--첫줄-->
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html">
+          <i class="fas fa-angle-left fa-3x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">범기</h1>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span
+        ><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a
+      ></span>
+      </div>
+    </header>
+
+    <!--날짜-->
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">
+        2022년 6월 2일 목요일
+      </div>
+
+      <!--내채팅-->
+      <div class="message-row">
+        <img src="img/face.jpg" />
+        <div class="message-row__content">
+          <span class="message__author">범기</span>
+          <div class="message__info">
+            <span class="message__bubble">안녕하세요!</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">반갑습니다!</span>
+            <span class="message__time">21:28</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="" class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">학력이나 경험이 어떻게 되시나요!</span>
+            <span class="message__time">21:28</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row">
+        <img src="img/face.jpg" />
+        <div class="message-row__content">
+          <span class="message__author">범기</span>
+          <div class="message__info">
+            <span class="message__bubble">2020년~2021년: "Just do IT"라는<br>고등학교 동아리에서 코딩과 IT에 관한 활동을 하였습니다.</span>
+            <span class="message__time">21:29</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="message-row">
+      <img src="img/face.jpg" />
+      <div class="message-row__content">
+        <span class="message__author">범기</span>
+        <div class="message__info">
+          <span class="message__bubble">
+            <a id="hyperlink" href="https://cafe.naver.com/bluez9q3l" target="_blank">https://cafe.naver.com/bluez9q3l</a>
+          </span>
+          <span class="message__time">21:29</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-row">
+      <img src="img/chat.png" alt="" />
+      <div class="message-row__content">
+        <div class="message__info">
+          <a href="https://cafe.naver.com/bluez9q3l" target="_blank">
+          <div class="hyperlink__column">
+            <div id="hyperlink__img">
+              <img src="img/DoIT.png">
+            </div>           
+            <div class="hyperlink__text">
+              <h4 class="hyperlink__title">Just do IT 2020: 네이버 카페</h4>
+              <h5 class="hyperlink__subtitle">대한민국 모임의 시작, 네이버 카페</h6>
+              <h6 class="hyperlink__sublink">cafe.naver.com</h6>
+            </div>
+          </div>
+          </a>
+          <span class="message__time">21:29</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-row">
+      <img src="img/face.jpg" />
+      <div class="message-row__content">
+        <span class="message__author">범기</span>
+        <div class="message__info">
+          <span class="message__bubble">그리고 지금 2021년도부터 <br>홍익대학교 소프트웨어융합과에 재학중입니다.</span>
+          <span class="message__time">21:30</span>
+        </div>
+      </div>
+    </div>
+    <div id="when"></div>
+    <div id="chatting_position" style="width:100%"></div>
+  </main>
+    
+
+    <!--채팅보내기-->
+    <form id="form"class="reply">
+      <div class="reply__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <form onsubmit="return false;">
+          <input id="input"
+           type="text"
+            placeholder="Write a message..." />
+        </form>
+        <i class="far fa-smile-wink fa-lg"></i>
+        <button>
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </form>
+
+    <!--화면 조정-->
+    <div id="no-mobile">
+      <span>화면을 줄여주세요!</span>
+    </div>
+
+    <!--아이콘js-->
+    <script
+      src="https://kit.fontawesome.com/bbc877c58c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/time.js"></script>
+    <script src="js/chatting.js"></script>
+  </body>
+</html>
